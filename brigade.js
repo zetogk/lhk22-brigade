@@ -18,7 +18,7 @@ function replyComment(e, p) {
       SLACK_MESSAGE: JSON.stringify(e.payload.body)//JSON.stringify(e.payload.body)//`${e.payload.body.comment.body} URL ---> ${e.payload.body.comment.url}` //`${e.payload.body} URL ---> ${e.payload.url}`
    }
 
-   console.log("PAYLOAD::: ", JSON.stringify(e.payload.body));
+   console.log("PAYLOAD::: ", JSON.stringify(e.payload));
 
     slack.run()
 
