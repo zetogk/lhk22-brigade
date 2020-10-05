@@ -15,10 +15,10 @@ function replyComment(e, p) {
       SLACK_COLOR: "#000099",
       SLACK_USERNAME: `Brigade`,
       SLACK_TITLE: "Issue comment :)",
-      SLACK_MESSAGE: JSON.stringify(e.payload.body)//`${e.payload.body.comment.body} URL ---> ${e.payload.body.comment.url}` //`${e.payload.body} URL ---> ${e.payload.url}`
+      SLACK_MESSAGE: "Probando"//JSON.stringify(e.payload.body)//`${e.payload.body.comment.body} URL ---> ${e.payload.body.comment.url}` //`${e.payload.body} URL ---> ${e.payload.url}`
    }
 
-   console.log("PAYLOAD::: ", e.payload.body);
+   console.log("PAYLOAD::: ", JSON.stringify(e.payload));
 
     slack.run()
 
