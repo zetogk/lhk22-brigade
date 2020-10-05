@@ -5,7 +5,7 @@ events.on("check_suite:rerequested", checkRequested);
 events.on("check_run:rerequested", checkRequested);
  */
 
-events.on("commit_comment", replyComment)
+events.on("issue_comment:created", replyComment)
 
 function replyComment(e, p) {
 
