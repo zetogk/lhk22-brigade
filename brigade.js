@@ -12,10 +12,13 @@ function replyComment(e, p) {
     var slack = new Job("slack-notify", "technosophos/slack-notify:latest", ["/slack-notify"])
     slack.env = {
       SLACK_WEBHOOK: p.secrets.SLACK_WEBHOOK,
-      SLACK_USERNAME: `Brigade ${e.payload.author_association}`,
-      SLACK_TITLE: "Issue comment",
-      SLACK_MESSAGE: `${e.payload.body} URL ---> ${e.payload.url}`
+      SLACK_USERNAME: `Brigade`,
+      SLACK_TITLE: "Issue comment :)",
+      SLACK_MESSAGE: JSON.stringify(e.payload)//`${e.payload.body} URL ---> ${e.payload.url}`
    }
+
+   console.log("PAYLOAD::: ", e.payload);
+
     slack.run()
 
     /* const env = {
