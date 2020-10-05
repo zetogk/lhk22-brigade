@@ -11,7 +11,7 @@ events.on("check_run:rerequested", checkRequested);
 // Our main test logic, refactored into a function that returns the job
 function runTests(e, project) {
 
-    console.log('Running tests 2');
+    console.log('Running tests 4');
 
   // Create a new job
   var testRunner = new Job("test-runner");
