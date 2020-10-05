@@ -14,7 +14,7 @@ function replyComment(e, p) {
       SLACK_WEBHOOK: p.secrets.SLACK_WEBHOOK,
       SLACK_USERNAME: `Brigade`,
       SLACK_TITLE: "Issue comment :)",
-      SLACK_MESSAGE: JSON.stringify(e.payload)//`${e.payload.body} URL ---> ${e.payload.url}`
+      SLACK_MESSAGE: JSON.stringify(e.payload.body)//`${e.payload.body} URL ---> ${e.payload.url}`
    }
 
    console.log("PAYLOAD::: ", e.payload);
